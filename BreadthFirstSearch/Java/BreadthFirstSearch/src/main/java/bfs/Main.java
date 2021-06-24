@@ -2,7 +2,7 @@ package bfs;
 
 public class Main {
     public static void main(String[] args) {
-        graph g = new graph(16);
+        graph g = new graph(27);
 
 //        g.addEdge(1, 3);
 //        g.addEdge(1, 6);
