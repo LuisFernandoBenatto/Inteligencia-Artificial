@@ -1,4 +1,4 @@
-package buscaemamplitude;
+package bfs_2;
 
 import java.util.*;
 
