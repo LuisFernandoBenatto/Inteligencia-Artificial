@@ -140,35 +140,35 @@ var arrPontos = [
 g.criarConexao(arrPontos[0], arrPontos[1], parseInt(75));
 g.criarConexao(arrPontos[0], arrPontos[3], parseInt(140));
 g.criarConexao(arrPontos[0], arrPontos[4], parseInt(118));
-g.criarConexao(arrPontos[1], arrPontos[0], parseInt(75));
+// g.criarConexao(arrPontos[1], arrPontos[0], parseInt(75));
 g.criarConexao(arrPontos[1], arrPontos[2], parseInt(71));
-g.criarConexao(arrPontos[2], arrPontos[1], parseInt(71));
+// g.criarConexao(arrPontos[2], arrPontos[1], parseInt(71));
 g.criarConexao(arrPontos[2], arrPontos[3], parseInt(151));
-g.criarConexao(arrPontos[3], arrPontos[0], parseInt(140));
-g.criarConexao(arrPontos[3], arrPontos[2], parseInt(151));
+// g.criarConexao(arrPontos[3], arrPontos[0], parseInt(140));
+// g.criarConexao(arrPontos[3], arrPontos[2], parseInt(151));
 g.criarConexao(arrPontos[3], arrPontos[9], parseInt(80));
 g.criarConexao(arrPontos[3], arrPontos[10], parseInt(99));
-g.criarConexao(arrPontos[4], arrPontos[0], parseInt(118));
+// g.criarConexao(arrPontos[4], arrPontos[0], parseInt(118));
 g.criarConexao(arrPontos[4], arrPontos[5], parseInt(111));
-g.criarConexao(arrPontos[5], arrPontos[4], parseInt(111));
+// g.criarConexao(arrPontos[5], arrPontos[4], parseInt(111));
 g.criarConexao(arrPontos[5], arrPontos[6], parseInt(70));
-g.criarConexao(arrPontos[6], arrPontos[5], parseInt(70));
+// g.criarConexao(arrPontos[6], arrPontos[5], parseInt(70));
 g.criarConexao(arrPontos[6], arrPontos[7], parseInt(75));
-g.criarConexao(arrPontos[7], arrPontos[6], parseInt(75));
+// g.criarConexao(arrPontos[7], arrPontos[6], parseInt(75));
 g.criarConexao(arrPontos[7], arrPontos[8], parseInt(120));
-g.criarConexao(arrPontos[8], arrPontos[7], parseInt(120));
+// g.criarConexao(arrPontos[8], arrPontos[7], parseInt(120));
 g.criarConexao(arrPontos[8], arrPontos[9], parseInt(146));
 g.criarConexao(arrPontos[8], arrPontos[11], parseInt(138));
-g.criarConexao(arrPontos[9], arrPontos[3], parseInt(80));
-g.criarConexao(arrPontos[9], arrPontos[8], parseInt(146));
+// g.criarConexao(arrPontos[9], arrPontos[3], parseInt(80));
+// g.criarConexao(arrPontos[9], arrPontos[8], parseInt(146));
 g.criarConexao(arrPontos[9], arrPontos[11], parseInt(97));
-g.criarConexao(arrPontos[10], arrPontos[3], parseInt(99));
+// g.criarConexao(arrPontos[10], arrPontos[3], parseInt(99));
 g.criarConexao(arrPontos[10], arrPontos[12], parseInt(211));
-g.criarConexao(arrPontos[11], arrPontos[8], parseInt(138));
-g.criarConexao(arrPontos[11], arrPontos[9], parseInt(97));
+// g.criarConexao(arrPontos[11], arrPontos[8], parseInt(138));
+// g.criarConexao(arrPontos[11], arrPontos[9], parseInt(97));
 g.criarConexao(arrPontos[11], arrPontos[12], parseInt(101));
-g.criarConexao(arrPontos[12], arrPontos[10], parseInt(211));
-g.criarConexao(arrPontos[12], arrPontos[11], parseInt(101));
+// g.criarConexao(arrPontos[12], arrPontos[10], parseInt(211));
+// g.criarConexao(arrPontos[12], arrPontos[11], parseInt(101));
 
 mostrarGrafo(g);
 
@@ -176,7 +176,7 @@ var qwe = arrPontos[0],
     ewq = arrPontos[12];
 
 while(qwe === ewq){
-    ewq = arrPontos[parseInt(Math.random() * arrPontos.length - 1)];
+    ewq = arrPontos[parseInt(Math.random() * arrPontos.length -1)];
 }
 
 mostrarCaminho(new Dijkstra(g, qwe, ewq));
