@@ -6,14 +6,9 @@
 function Grafo() {
     var conexoes = [];
     var nos = [];
-
     var l = 0;
     this.pegarConexoesNo = function(no) {
-        var i = 0
-                , con = conexoes
-                , m = con.length
-                , c = 0
-                , a = [];
+        var i = 0, con = conexoes , m = con.length, c = 0, a = [];
         for (i; i < m; i++) {
             if(con[i].doNo)
             if (con[i].doNo.dado === no)

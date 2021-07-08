@@ -8,7 +8,6 @@ function mostrarGrafo(grafo) {
     var conexoes = grafo.conexoes();
     var vertices = [];
     var i = 0, j = 0, m = conexoes.length;
-
     //leitura
     for (i; i < m; i++) {
         if (indexOf(vertices, conexoes[i].doNo) === true)
@@ -16,7 +15,6 @@ function mostrarGrafo(grafo) {
         if (indexOf(vertices, conexoes[i].paraNo) === true)
             vertices.push(conexoes[i].paraNo);
     }
-
     //desenho
     for (i = 0; i < m; i++)
         criarArestaTexto(conexoes[i].doNo.dado, conexoes[i].paraNo.dado, conexoes[i].custo);
@@ -28,7 +26,6 @@ function mostrarGrafo(grafo) {
 
 function mostrarCaminho(arr) {
 //    console.log(arr, arr.total);
-
     var borda = 'blueviolet';
     var fill = 'black';
     var letra = 'white';
@@ -121,7 +118,6 @@ function criarArestaTexto(doNo, paraNo, texto) {
     criarTexto(texto, X * 0.5 + x, Y * 0.5 + y);
 }
 
-
 function criarVerticeTexto(x, y, texto) {
     criarVertice(x, y, arguments[3], arguments[5]);
     criarTexto(texto, x - 3.5, y + 3, arguments[4] || 'yellow');
@@ -176,12 +172,12 @@ g.criarConexao(arrPontos[12], arrPontos[10], parseInt(211));
 g.criarConexao(arrPontos[12], arrPontos[11], parseInt(101));
 
 mostrarGrafo(g);
+
 var qwe = arrPontos[0], 
     ewq = arrPontos[12];
 
 while(qwe === ewq){
     ewq = arrPontos[parseInt(Math.random() * arrPontos.length - 1)];
 }
-mostrarCaminho(
-    new Dijkstra(g, qwe, ewq)
-);
+
+mostrarCaminho(new Dijkstra(g, qwe, ewq));

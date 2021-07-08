@@ -1,4 +1,4 @@
-/* Based on Artificial Intelligence for Games from Ian Millington (Author), John Funge (Author) */
+/*Based on Artificial Intelligence for Games*/
 /**
  * Usando como base o _Grafo e seu conteudo.
  * Faz uma procura em todas as conexoes dos nos disponiveis procurando a menor ligacao
@@ -8,7 +8,6 @@
  * @returns { Array | nulo }
  */
 function Dijkstra(_grafo, _inicio, _fim) {
-
 //    console.log('new dijkstra', arguments);
 //    console.log('new dijkstra', _inicio,_fim);
     var t = new Date();
@@ -36,7 +35,7 @@ function Dijkstra(_grafo, _inicio, _fim) {
         conexoes = _grafo.pegarConexoesNo(atual.dado);
 
 //        console.log( atual );
-        c = null;i = 0;
+        c = null; i = 0;
         m = conexoes.length;
 
         for (i; i < m; i++) {
@@ -75,13 +74,15 @@ function Dijkstra(_grafo, _inicio, _fim) {
         }
         aberta.sub(atual)
         fechada.add(atual)
-//        console.log('atual',atual.dado,atual);
-//        console.log('atual aberta caminho ', aberta.caminho());
-//        console.log('atual fechada caminho ', fechada.caminho());
-//        console.log('add', aberta.sub(atual));
-//        console.log('sub', fechada.add(atual));
-//        console.log('aberta caminho ', aberta.caminho());
-//        console.log('fechada caminho ', fechada.caminho());
+    /* 
+       console.log('atual',atual.dado,atual);
+       console.log('atual aberta caminho ', aberta.caminho());
+       console.log('atual fechada caminho ', fechada.caminho());
+       console.log('add', aberta.sub(atual));
+       console.log('sub', fechada.add(atual));
+       console.log('aberta caminho ', aberta.caminho());
+       console.log('fechada caminho ', fechada.caminho());
+    */
     }// fim while
 
     if (atual.dado !== _fim) {
