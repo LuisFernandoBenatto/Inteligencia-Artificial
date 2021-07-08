@@ -25,7 +25,7 @@ function mostrarGrafo(grafo) {
 }
 
 function mostrarCaminho(arr) {
-//    console.log(arr, arr.total);
+// console.log(arr, arr.total);
     var borda = 'blueviolet';
     var fill = 'black';
     var letra = 'white';
@@ -75,7 +75,7 @@ function criarTexto(texto, x, y) {
 }
 
 function criarArestaTexto(doNo, paraNo, texto) {
-//    console.log(paraNo, doNo)
+// console.log(paraNo, doNo)
     var coef = ((paraNo.y - doNo.y) / (paraNo.x - doNo.x));
     var X, Y, y, x;
 
@@ -106,7 +106,6 @@ function criarArestaTexto(doNo, paraNo, texto) {
     else if (coef <= -1) {
         y += 3;
         x += 3;
-
     }
     if (coef === Infinity || coef === -Infinity) {
         y += 7;
