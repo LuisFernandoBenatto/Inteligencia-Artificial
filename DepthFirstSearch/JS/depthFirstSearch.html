@@ -1,0 +1,94 @@
+<script>
+/**
+Programa JavaScript para imprimir DFS
+travessia de um dado
+gráfico
+  
+Esta classe representa um
+grafo direcionado usando adjacência
+representação de lista 
+*/
+  class Graph {     
+    // Construtor
+    constructor(v) {
+      this.V = v;
+      this.adj = new Array(v).fill([]);
+    }
+    // Função para adicionar uma aresta ao gráfico 
+    AddEdge(v, w) {
+      this.adj[v].push(w); // Adiciona w à lista de v. 
+    }
+    // Uma função usada pelo DFS 
+    DFSUtil(v, visited) {
+      // Marque a corrente 
+      // nó como visitado e imprimi-lo 
+      visited[v] = true;
+      document.write(v + " ");
+      // console.log(v + " ");
+      /* Recorre para todos os vértices adjacentes a este vértice */
+      for (const n of this.adj[v]) {
+        if (!visited[n]) this.DFSUtil(n, visited);
+      }
+    }
+    /*A função a fazer DFS traversal. Usa recursiva DFSUtil () */
+    DFS() {
+      // Marque todos os vértices como não visitados 
+      var visited = new Array(this.V).fill(false);
+      /*
+        Chame o auxiliar recursivo função para imprimir DFS
+        travessia a partir de todos os vértices um por um 
+      */
+      for (var i = 0; i < this.V; ++i)
+        if (visited[i] == false) this.DFSUtil(i, visited);
+    }
+  }
+      
+  var g = new Graph(20);
+
+  g.addEdge(0, 1);
+  g.addEdge(0, 4);
+  g.addEdge(1, 0);
+  g.addEdge(1, 2);
+  g.addEdge(2, 3);
+  g.addEdge(2, 1);
+  g.addEdge(3, 2);
+  g.addEdge(3, 10);
+  g.addEdge(3, 9);
+  g.addEdge(4, 0);
+  g.addEdge(4, 5);
+  g.addEdge(5, 4);
+  g.addEdge(5, 6);
+  g.addEdge(6, 5);
+  g.addEdge(6, 7);
+  g.addEdge(7, 6);
+  g.addEdge(7, 8);
+  g.addEdge(8, 7);
+  g.addEdge(8, 9);
+  g.addEdge(8, 10);
+  g.addEdge(9, 3);
+  g.addEdge(9, 8);
+  g.addEdge(9, 11);
+  g.addEdge(10, 3);
+  g.addEdge(10, 12);
+  g.addEdge(12, 10);
+  g.addEdge(12, 11);
+  g.addEdge(12,13);
+  g.addEdge(12,14);
+  g.addEdge(13,12);
+  g.addEdge(14,12);
+  g.addEdge(14,17);
+  g.addEdge(14,15);
+  g.addEdge(15,14);
+  g.addEdge(15,16);
+  g.addEdge(16,15);
+  g.addEdge(17,14);
+  g.addEdge(17,18);
+  g.addEdge(18,17);
+  g.addEdge(18,19);
+  g.addEdge(19,18);
+  
+  document.write("A seguir está o Depth First Search<br>");
+  // console.log("A seguir está o Depth First Search");
+  
+  g.DFS();
+</script>
