@@ -9,8 +9,7 @@ function ldfs(visited, graph, node, current, limit){
       })
   }
 }
-
-counties = {
+counties = {  
   1: "Água Branca",
   2: "Anadia",
   3: "Arapiraca",
@@ -114,8 +113,7 @@ counties = {
   101: "União dos Palmares",
   102: "Viçosa",
 }
-
-graph = {
+graph = {  
   1:   [54, 69, 26, 62],
   2:   [97, 53, 98, 46, 15, 10],
   3:   [21, 34, 25, 45, 29, 94, 46, 81],
@@ -141,7 +139,7 @@ graph = {
   23:  [47, 85, 52],
   24:  [99, 41, 73, 30],
   25:  [34, 48, 40, 3, 32],
-  26:  [1, 26, 62],
+  26:  [1, 69, 62],
   27:  [86, 12, 48],
   28:  [57, 67, 12, 34],
   29:  [45, 3, 16],
@@ -154,7 +152,7 @@ graph = {
   36:  [54, 17, 96, 77, 62],
   37:  [7, 58, 66],
   38:  [14, 43, 79, 50],
-  39:  [79, 50, 38, 43, 55, 80, 39],
+  39:  [79, 50, 80],
   40:  [48, 7, 25, 32, 100],
   41:  [15, 24, 92, 84],
   42:  [101, 22, 55, 91, 31],
@@ -219,7 +217,37 @@ graph = {
   101: [11, 87, 89, 33, 42],
   102: [20, 72, 49, 76, 13],
 }
-
 visited = []
 ldfs(visited, graph, 1, 1, 10)
-console.log(RESULTS);
+// console.log(RESULTS);
+
+console.log(RESULTS.map(node => counties[node]))
+
+// Output
+
+/*[
+  'Água Branca',            'Mata Grande',
+  'Canapi',                 'Ouro Branco',
+  'Maravilha',              'Poço das Trincheiras',
+  'Senador Rui Palmeira',   'Inhapi',
+  'Piranhas',               "Olho d'Água do Casado",
+  'São José da Tapera',     'Pão de Açúcar',
+  'Santana do Ipanema',     'Carneiros',
+  "Olho d'Água das Flores", 'Olivença',
+  'Monteirópolis',          'Major Izidoro',
+  'Dois Riachos',           'Cacimbinhas',
+  'Pariconha',              'Delmiro Gouveia'
+]*/
+
+
+
+
+// for(const [key, value] of Object.entries(graph)) {
+//   console.log(counties[key], value)
+// }
+// for(const [key, values] of Object.entries(counties)) {
+//     console.log(counties[key], values.map(node => counties[node]))
+// }
+// for(const [idx, element] of RESULTS.entries()) {
+//   counties[idx] = element
+// }
