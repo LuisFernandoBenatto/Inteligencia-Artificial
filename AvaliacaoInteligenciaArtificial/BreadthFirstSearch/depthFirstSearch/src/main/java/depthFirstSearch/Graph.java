@@ -172,7 +172,7 @@ public class Graph {
         g.addEdge(21, 34);
         g.addEdge(21, 98);
         g.addEdge(21, 46);
-        g.addEdge(21, 13);
+        g.addEdge(21, 3);
 
         g.addEdge(22, 33);
         g.addEdge(22, 42);
@@ -465,7 +465,7 @@ public class Graph {
         g.addEdge(79, 39);
 
         g.addEdge(80, 55);
-        g.addEdge(80, 70);
+        g.addEdge(80, 79);
         g.addEdge(80, 39);
         g.addEdge(80, 93);
 
@@ -547,7 +547,7 @@ public class Graph {
 
         g.addEdge(96, 36);
         g.addEdge(96, 17);
-        g.addEdge(96, 79);
+        g.addEdge(96, 78);
         g.addEdge(96, 86);
         g.addEdge(96, 19);
         g.addEdge(96, 90);
@@ -598,6 +598,6 @@ public class Graph {
     }   
 }
 /*
-    A seguir está o Depth First Traversal  (começando do vértice 1)
-    1 54 17 65 51 78 96 36 77 62 26 69 90 19 61 64 86 27 12 57 28 67 34 98 8 97 49 72 82 20 102 76 53 4 13 18 11 101 87 89 33 22 42 55 60 14 43 38 79 50 39 80 70 5 91 31 56 59 83 75 95 47 85 23 52 92 15 2 46 21 3 25 48 40 7 37 58 66 68 9 100 32 45 16 29 63 88 81 35 44 94 99 24 41 84 6 73 74 30 10 71 93 
+   A seguir está o Depth First Traversal  (começando do vértice 1)
+    1 54 17 65 51 78 96 36 77 62 26 69 90 19 61 64 86 27 12 57 28 67 34 98 8 97 49 72 82 20 102 76 53 4 13 18 11 101 87 89 33 22 42 55 60 14 43 38 79 50 39 80 93 71 91 31 56 59 83 75 95 47 70 5 85 23 52 92 15 2 46 21 3 25 48 40 7 37 58 66 68 9 100 32 45 16 29 63 88 81 35 44 94 99 24 41 84 6 73 74 30 10 
 */
