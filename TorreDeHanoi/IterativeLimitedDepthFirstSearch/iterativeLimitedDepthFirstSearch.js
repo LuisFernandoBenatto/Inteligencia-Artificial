@@ -148,7 +148,7 @@ graph = {
   27:  [26, 19],
 }
 visited = []
-ldfs(visited, graph, 1, 1, 12)
+ldfs(visited, graph, 1, 1, 8)
 // console.log(RESULTS);
 console.log(RESULTS.map(node => hanoi[node]))
 
